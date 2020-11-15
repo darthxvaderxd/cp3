@@ -1,0 +1,17 @@
+<html xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	<title>JSF Form Page</title>	
+</head>
+<body>
+   <h:form>
+        <h:outputText for="firstName">First Name:</h:outputText>
+        <h:inputText id="firstName" value="#{user.firstName}" label="First Name:"/>
+        <br />
+        <h:outputText for="lastName">Last Name:</h:outputText>
+        <h:inputText id="lastName" value="#{user.lastName}" label="Last Name:"/>
+        <br />
+        <h:commandButton action="#{formController.onSubmit(user)}" value="Submit" />
+        <h:commandButton action="#{formController.onFlash(user)}" value="Flash" />
+    </h:form>
+</body>
+</html>
